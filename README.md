@@ -56,6 +56,7 @@ CRUD COLECCIÓN "MAGICSCHOOLS"
 ## Autores ✒️
 
 Desarrolladora: Altea Segura Cáliz para Rock The Code
+
 Documentación: https://harrypotter.fandom.com/es/wiki/HarryPotter_Wiki
 
 ## License
