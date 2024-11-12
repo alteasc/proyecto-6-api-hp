@@ -50,8 +50,14 @@ const updateSchool = async (req, res, next) => {
     const newSchool = new magicSchool(req.body)
     newSchool._id = id
     newSchool.alumnos = [...oldSchool.alumnos, ...req.body.alumnos]
-    const schoolUpdated = await magicSchool.findByIdAndUpdate(id, newSchool, {
-      new: true
+
+    const schoolUpdated = await magicSchool.findByIdAndUpdate({
+      $addToSet:
+        (id,
+        newSchool,
+        {
+          new: true
+        })
     })
     return res.status(200).json(schoolUpdated)
   } catch (error) {
